@@ -10,7 +10,7 @@ import java.util.UUID;
 
 
  public abstract  class Jugador implements Comparable<Jugador> {
-private String id;
+private int id;
 private String Nombre;
 private String Nacionalidad;
 private int nacimiento;
@@ -44,11 +44,11 @@ private Estado estado;
     }
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

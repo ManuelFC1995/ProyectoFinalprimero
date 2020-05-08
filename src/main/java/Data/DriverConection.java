@@ -30,7 +30,7 @@ public  class DriverConection {
         Connection conexion=null;
         try{
         String Timezone="?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-        String ip="localhost:3306/futbolistas";
+        String ip="localhost:3306/jugadores";
         String url="jdbc:mysql://";
         String user="root";
         String pass="";

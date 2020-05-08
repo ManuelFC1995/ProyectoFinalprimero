@@ -5,15 +5,16 @@
  */
 package com.mycompany.mavenproject7;
 
-
-
+import Data.DriverConection;
+import java.sql.Connection;
 
 /**
  *
  * @author manue
  */
-public class Ejecutable {
+public class Pruebas {
     public static void main(String[] args) {
-        App.main(args);
+        Connection con =  DriverConection.GetConnection();
+        
     }
 }

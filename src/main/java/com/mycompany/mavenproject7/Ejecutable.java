@@ -5,15 +5,17 @@
  */
 package com.mycompany.mavenproject7;
 
+import GUI.INTERFAZ;
 
 
 
-/**
- *
- * @author manue
- */
+
+
+
+
+
 public class Ejecutable {
     public static void main(String[] args) {
-        App.main(args);
+        INTERFAZ.principal();
     }
 }

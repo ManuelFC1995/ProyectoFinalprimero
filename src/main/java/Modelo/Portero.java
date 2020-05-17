@@ -6,8 +6,17 @@ import Enum.Estado;
 
 public class Portero extends Jugador {
 
-    public Portero(String Nombre, String Nacionalidad, int nacimiento, int puntuacion, String clubes, int n_Titulos, String Titulos, String Titulos_individuales, int N_Partidos) {
-        super(Nombre, Nacionalidad, nacimiento, puntuacion, clubes, n_Titulos, Titulos, Titulos_individuales, N_Partidos);
+    public Portero(String Nombre, String Nacionalidad, int puntuacion, int N_titulos, int N_Partidos, Estado estado) {
+        super(Nombre, Nacionalidad, puntuacion, N_titulos, N_Partidos, estado);
+    }
+
+
+
+  
+  
+
+    public Portero() {
+       
     }
 
 

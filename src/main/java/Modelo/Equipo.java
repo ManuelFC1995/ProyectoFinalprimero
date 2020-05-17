@@ -32,7 +32,7 @@ public class Equipo implements Iequipo {
 
     public boolean AlineDefensa(Futbolista f) {
         boolean result = false;
-        if (f != null && f.posicion.equals(posicion.Defensa)) {
+        if (f != null && f.getPosicion().equals(posicion.Defensa)) {
 
             for (int i = 0; i <= 10 && result != true; i++) {
                 if (futbolistas[i] == null) {
@@ -48,7 +48,7 @@ public class Equipo implements Iequipo {
 
     public boolean AlineaCentroCampista(Futbolista f) {
         boolean result = false;
-        if (f != null && f.posicion.equals(posicion.CentroCampista)) {
+        if (f != null && f.getPosicion().equals(posicion.CentroCampista)) {
 
             for (int i = 0; i <= 10 && result != true; i++) {
                 if (futbolistas[i] == null) {
@@ -64,7 +64,7 @@ public class Equipo implements Iequipo {
 
     public boolean AlineaDelantero(Futbolista f) {
         boolean result = false;
-        if (f != null && f.posicion.equals(posicion.Delantero)) {
+        if (f != null && f.getPosicion().equals(posicion.Delantero)) {
 
             for (int i = 0; i <= 10 && result != true; i++) {
                 if (futbolistas[i] == null) {

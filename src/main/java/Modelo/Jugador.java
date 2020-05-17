@@ -10,38 +10,50 @@ import java.util.UUID;
 
 
  public abstract  class Jugador implements Comparable<Jugador> {
-private int id;
+private  int id;
 private String Nombre;
 private String Nacionalidad;
-private int nacimiento;
+private static int contador;
 private int puntuacion;
-private String clubes;
-private int n_Titulos;
-private String Titulos;
-private String Titulos_individuales;
+private int N_titulos;
 private int N_Partidos;
 private Estado estado;
 
-    public Jugador(String Nombre, String Nacionalidad, int nacimiento, int puntuacion, String clubes, int n_Titulos, String Titulos, String Titulos_individuales, int N_Partidos) {
+    public Jugador(String Nombre, String Nacionalidad, int puntuacion, int N_titulos, int N_Partidos, Estado estado) {
+       id=contador++;
         this.Nombre = Nombre;
         this.Nacionalidad = Nacionalidad;
-        this.nacimiento = nacimiento;
         this.puntuacion = puntuacion;
-        this.clubes = clubes;
-        this.n_Titulos = n_Titulos;
-        this.Titulos = Titulos;
-        this.Titulos_individuales = Titulos_individuales;
+        this.N_titulos = N_titulos;
+        this.N_Partidos = N_Partidos;
+        this.estado = estado;
+        contador++;
+    }
+
+
+
+    public Jugador() {
+        this.id=contador++;
+        this.Nombre="";
+        this.Nacionalidad="";
+        this.puntuacion = 0;
+        this.N_titulos=0;
         this.N_Partidos = N_Partidos;
         this.estado=estado.Disponible;
+        contador++;
     }
+    
+    
 
     public Estado getEstado() {
         return estado;
     }
+    
 
     public void setEstado(Estado estado) {
         this.estado = estado;
     }
+ 
 
 
     public int getId() {
@@ -68,13 +80,8 @@ private Estado estado;
         this.Nacionalidad = Nacionalidad;
     }
 
-    public int getNacimiento() {
-        return nacimiento;
-    }
-
-    public void setNacimiento(int nacimiento) {
-        this.nacimiento = nacimiento;
-    }
+ 
+ 
 
     public int getPuntuacion() {
         return puntuacion;
@@ -84,37 +91,19 @@ private Estado estado;
         this.puntuacion = puntuacion;
     }
 
-    public String getClubes() {
-        return clubes;
+    public int getN_titulos() {
+        return N_titulos;
     }
 
-    public void setClubes(String clubes) {
-        this.clubes = clubes;
+    public void setN_titulos(int N_titulos) {
+        this.N_titulos = N_titulos;
     }
 
-    public int getN_Titulos() {
-        return n_Titulos;
-    }
+ 
 
-    public void setN_Titulos(int n_Titulos) {
-        this.n_Titulos = n_Titulos;
-    }
 
-    public String getTitulos() {
-        return Titulos;
-    }
 
-    public void setTitulos(String Titulos) {
-        this.Titulos = Titulos;
-    }
 
-    public String getTitulos_individuales() {
-        return Titulos_individuales;
-    }
-
-    public void setTitulos_individuales(String Titulos_individuales) {
-        this.Titulos_individuales = Titulos_individuales;
-    }
 
     public int getN_Partidos() {
         return N_Partidos;

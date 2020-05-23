@@ -3,12 +3,13 @@ package Modelo;
 import Enum.Estado;
 import Enum.posicion;
 
-public class Equipo implements Iequipo {
+public class Equipo  {
 
     private String Nombre;
     private Futbolista[] futbolistas = new Futbolista[10];
     private Portero portero;
     private int mediaEquipo;
+    
 
     public Equipo(String Nombre) {
         this.Nombre = Nombre;
@@ -24,6 +25,14 @@ public class Equipo implements Iequipo {
 
     public Jugador[] getFutbolistas() {
         return futbolistas;
+    }
+    
+    public Portero GetPortero(){
+        return portero;
+    }
+    
+    public void SetPortero(Portero p){
+        this.portero=p;
     }
 
     public void setFutbolistas(Jugador[] futbolistas) {
@@ -77,6 +86,22 @@ public class Equipo implements Iequipo {
         }
         return result;
     }
+    
+    public boolean AlineaJugador(Futbolista f) {
+        boolean result = false;
+        if (f != null ) {
+
+            for (int i = 0; i <= 10 && result != true; i++) {
+                if (futbolistas[i] == null) {
+                    futbolistas[i] = f;
+                     f.setEstado(Estado.Alineado);
+                    result = true;
+                }
+            }
+
+        }
+        return result;
+    }
 
     public boolean AlienaPortero(Portero p) {
         boolean result = false;
@@ -100,7 +125,7 @@ public class Equipo implements Iequipo {
         return result;
     }
 
-    @Override
+   
     public boolean equipolleno() {
        boolean result=true;
       for(Futbolista f:futbolistas){

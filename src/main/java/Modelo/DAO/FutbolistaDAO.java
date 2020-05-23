@@ -24,9 +24,9 @@ public class FutbolistaDAO {
 
     final String cargarAllFutbolistas = "select * from Futbolistas order by puntuacion desc";
 
-    final String InsertarFutbolista = "INSERT INTO FUTBOLISTAS (ID,nombre,nacionalidad,puntuacion,"
+    final String InsertarFutbolista = "INSERT INTO FUTBOLISTAS (nombre,nacionalidad,puntuacion,"
             + " n_titulos,n_partidos,n_goles,n_asistencias,"
-            + "posicion) VALUES(? ,?, ?, ?, ?, ?, ?, ?,?)";
+            + "posicion) VALUES(?, ?, ?, ?, ?, ?, ?,?)";
 
     public List<Futbolista> SelectFutbolistas(String Query) throws SQLException {
 
@@ -82,11 +82,11 @@ public class FutbolistaDAO {
         return ListaFutbolistas;
     }
 
-    public void insertFutbolista(Futbolista futbolista) throws SQLException {
+    public void insertDefensa(Futbolista futbolista) throws SQLException {
         PreparedStatement ps = null;
         try {
             ps = conexion.prepareStatement(InsertarFutbolista);
-            ps.setInt(1, futbolista.getId());
+           
             ps.setString(2, futbolista.getNombre());
             ps.setString(3, futbolista.getNacionalidad());
             ps.setInt(4, futbolista.getPuntuacion());
@@ -94,20 +94,51 @@ public class FutbolistaDAO {
             ps.setInt(6, futbolista.getN_Partidos());
             ps.setInt(7, futbolista.getN_goles());
             ps.setInt(8, futbolista.getN_asistencias());
-            if (futbolista.getPosicion() == posicion.Defensa) {
+           
                 ps.setInt(9, 1);
+       
+        } finally {
+            if (ps != null) {
+                ps.close();
             }
-            if (futbolista.getPosicion() == posicion.CentroCampista) {
+        }
+    }
+      public void inserMC(Futbolista futbolista) throws SQLException {
+        PreparedStatement ps = null;
+        try {
+            ps = conexion.prepareStatement(InsertarFutbolista);
+           
+            ps.setString(2, futbolista.getNombre());
+            ps.setString(3, futbolista.getNacionalidad());
+            ps.setInt(4, futbolista.getPuntuacion());
+            ps.setInt(5, futbolista.getN_titulos());
+            ps.setInt(6, futbolista.getN_Partidos());
+            ps.setInt(7, futbolista.getN_goles());
+            ps.setInt(8, futbolista.getN_asistencias());
+           
                 ps.setInt(9, 2);
+       
+        } finally {
+            if (ps != null) {
+                ps.close();
             }
-            if (futbolista.getPosicion() == posicion.Delantero) {
+        }
+    }
+        public void inserDC(Futbolista futbolista) throws SQLException {
+        PreparedStatement ps = null;
+        try {
+            ps = conexion.prepareStatement(InsertarFutbolista);
+           
+            ps.setString(2, futbolista.getNombre());
+            ps.setString(3, futbolista.getNacionalidad());
+            ps.setInt(4, futbolista.getPuntuacion());
+            ps.setInt(5, futbolista.getN_titulos());
+            ps.setInt(6, futbolista.getN_Partidos());
+            ps.setInt(7, futbolista.getN_goles());
+            ps.setInt(8, futbolista.getN_asistencias());
+           
                 ps.setInt(9, 3);
-            }
-
-            if (ps.executeUpdate() == 0) {
-                throw new SQLException("NO se ha insertado correctamente");
-            }
-
+       
         } finally {
             if (ps != null) {
                 ps.close();
@@ -206,5 +237,56 @@ public class FutbolistaDAO {
                st.close();
            }         
      }
+    }
+    public void updateDefensaPosicion(Futbolista f ,posicion p) throws SQLException{
+        Statement st=null;
+        try{
+            if (conexion != null){
+         
+                    
+             st = conexion.createStatement();
+          
+             st.executeUpdate("UPDATE  PORTEROS SET POSICION=1 WHERE id="+f.getId());
+                }
+            
+        }finally{
+                       if (conexion != null){
+               st.close();
+        }
+        }
+    }
+      public void updateMedioPosicion(Futbolista f ,posicion p) throws SQLException{
+        Statement st=null;
+        try{
+            if (conexion != null){
+              
+                    
+             st = conexion.createStatement();
+          
+             st.executeUpdate("UPDATE  PORTEROS SET POSICION=2 WHERE id="+f.getId());
+                
+            } 
+        }finally{
+                       if (conexion != null){
+               st.close();
+        }
+        }
+    }
+        public void updateDCPosicion(Futbolista f ,posicion p) throws SQLException{
+        Statement st=null;
+        try{
+            if (conexion != null){
+              
+                    
+             st = conexion.createStatement();
+          
+             st.executeUpdate("UPDATE  PORTEROS SET POSICION=3 WHERE id="+f.getId());
+                
+            } 
+        }finally{
+                       if (conexion != null){
+               st.close();
+        }
+        }
     }
 }

@@ -73,12 +73,12 @@ public class PorteroDAO  {
         return ListaPorteros;
     }
 
-     public void insertFutbolista(Portero Portero) throws SQLException{
+     public void insertPortero(Portero Portero) throws SQLException{
          PreparedStatement ps=null;
          try{
-             ps=conexion.prepareStatement("INSERT INTO PORTEROS(ID,nombre,nacionalidad,puntuacion,"
-              + "n_titulos,n_partidos)VALUES(?,?,?,?,?,?)");
-             ps.setInt(1, Portero.getId());
+             ps=conexion.prepareStatement("INSERT INTO PORTEROS(nombre,nacionalidad,puntuacion,"
+              + "n_titulos,n_partidos)VALUES(?,?,?,?,?)");
+           
              ps.setString(2, Portero.getNombre());
              ps.setString(3, Portero.getNacionalidad());
              ps.setInt(4, Portero.getPuntuacion());

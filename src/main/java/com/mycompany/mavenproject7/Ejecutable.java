@@ -6,6 +6,7 @@
 package com.mycompany.mavenproject7;
 
 import GUI.INTERFAZ;
+import java.sql.SQLException;
 
 
 
@@ -15,7 +16,7 @@ import GUI.INTERFAZ;
 
 
 public class Ejecutable {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         INTERFAZ.principal();
     }
 }

@@ -79,11 +79,11 @@ public class PorteroDAO  {
              ps=conexion.prepareStatement("INSERT INTO PORTEROS(nombre,nacionalidad,puntuacion,"
               + "n_titulos,n_partidos)VALUES(?,?,?,?,?)");
            
-             ps.setString(2, Portero.getNombre());
-             ps.setString(3, Portero.getNacionalidad());
-             ps.setInt(4, Portero.getPuntuacion());
-             ps.setInt(5, Portero.getN_titulos());
-             ps.setInt(6, Portero.getN_Partidos());
+             ps.setString(1, Portero.getNombre());
+             ps.setString(2, Portero.getNacionalidad());
+             ps.setInt(3, Portero.getPuntuacion());
+             ps.setInt(4, Portero.getN_titulos());
+             ps.setInt(5, Portero.getN_Partidos());
             if(ps.executeUpdate()==0) {
                   throw new SQLException("NO se ha insertado correctamente");
               }

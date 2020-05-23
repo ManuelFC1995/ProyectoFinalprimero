@@ -167,8 +167,29 @@ public class INTERFAZ {
                     break;
                 case 2:
                     UIUtilities.clearScreen();
-                    Futbolista f2 =c.Chosedefensa();
-               c.ActualizarJugadorPosicion(f2);
+                     int opciones3;
+                   do{ 
+                    System.out.println("1.Cambiar Puntuacion");
+                     System.out.println("2.Cambiar Posicion");
+                     System.out.println("3 volver");
+                  
+                    
+                        opciones3=UIUtilities.getInt();
+                        switch(opciones3){
+                            case 1
+                                    :
+                                 UIUtilities.clearScreen();c.ActualizardefensaMEDIA();
+                            break;
+                            case 2: UIUtilities.clearScreen();
+                                Futbolista f13=c.Chosedefensa();
+                                c.ActualizarJugadorPosicion(f13);
+                                break;
+                            case 3: UIUtilities.clearScreen();
+                            default:System.out.println("Elija opcion correcta");
+                        }
+                         
+                     }while(opciones3!=3);
+                    
                     break;
                 case 3:
                     UIUtilities.clearScreen();
@@ -207,10 +228,30 @@ public class INTERFAZ {
                    JugadoresGUI.SHOWCARTAMedio(f1);
                     break;
                 case 2:
-                    UIUtilities.clearScreen();
-                   UIUtilities.clearScreen();
-                    Futbolista f =c.ChoseMedio();
-               c.ActualizarJugadorPosicion(f);
+               UIUtilities.clearScreen();
+                    int opciones3;
+                do{  
+                    System.out.println("1.Cambiar Puntuacion");
+                     System.out.println("2.Cambiar Posicion");
+                     System.out.println("3 volver");
+                   
+               
+                        opciones3=UIUtilities.getInt();
+                        switch(opciones3){
+                            case 1
+                                    :
+                                 UIUtilities.clearScreen();c.ActualizarCentrocMEDIA();
+                            break;
+                            case 2: UIUtilities.clearScreen();
+                                Futbolista f13=c.ChoseMedio();
+                                c.ActualizarJugadorPosicion(f13);
+                                break;
+                            case 3: UIUtilities.clearScreen();
+                            default:System.out.println("Elija opcion correcta");
+                        }
+                         
+                     }while(opciones3!=3);
+                    
                     break;
                 case 3:
                     UIUtilities.clearScreen();
@@ -247,10 +288,30 @@ public class INTERFAZ {
                   JugadoresGUI.SHOWCARTADELANTERO(f1);
                     break;
                 case 2:
-                    UIUtilities.clearScreen();
-                  UIUtilities.clearScreen();
-                    Futbolista f =c.ChoseDelantero();
-               c.ActualizarJugadorPosicion(f);
+                   UIUtilities.clearScreen();
+                     int opciones3;
+                  do{
+                    System.out.println("1.Cambiar Puntuacion");
+                     System.out.println("2.Cambiar Posicion");
+                     System.out.println("3 volver");
+                 
+                  
+                        opciones3=UIUtilities.getInt();
+                        switch(opciones3){
+                            case 1
+                                    :
+                                 UIUtilities.clearScreen();c.ActualizDelanteroMEDIA();
+                            break;
+                            case 2: UIUtilities.clearScreen();
+                                Futbolista f13=c.ChoseDelantero();
+                                c.ActualizarJugadorPosicion(f13);
+                                break;
+                            case 3: UIUtilities.clearScreen();
+                            default:System.out.println("Elija opcion correcta");
+                        }
+                         
+                     }while(opciones3!=3);
+                    
                     break;
                 case 3:
                     UIUtilities.clearScreen();
@@ -292,11 +353,11 @@ public class INTERFAZ {
                     break;
                 case 2:
                    UIUtilities.clearScreen();
-                  JugadoresGUI.ShowFutbolistas(QUERYS.SelectFutbolistasGoles);
+                  JugadoresGUI.ShowFutbolistasGoles(QUERYS.SelectFutbolistasGoles);
                     break;
                      case 3:
                      UIUtilities.clearScreen();
-                JugadoresGUI.ShowFutbolistas(QUERYS.SelectFutbolistasAsistencias);
+                JugadoresGUI.ShowFutbolistasAsistencias(QUERYS.SelectFutbolistasAsistencias);
                     break;
           
                    

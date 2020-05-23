@@ -25,7 +25,7 @@ public class FutbolistaDAO {
     final String cargarAllFutbolistas = "select * from Futbolistas order by puntuacion desc";
 
     final String InsertarFutbolista = "INSERT INTO FUTBOLISTAS (nombre,nacionalidad,puntuacion,"
-            + " n_titulos,n_partidos,n_goles,n_asistencias,"
+            + " n_titulos,n_partidos,n_goles,n_asistencias,posicion)"
             + "posicion) VALUES(?, ?, ?, ?, ?, ?, ?,?)";
 
     public List<Futbolista> SelectFutbolistas(String Query) throws SQLException {
@@ -87,15 +87,15 @@ public class FutbolistaDAO {
         try {
             ps = conexion.prepareStatement(InsertarFutbolista);
            
-            ps.setString(2, futbolista.getNombre());
-            ps.setString(3, futbolista.getNacionalidad());
-            ps.setInt(4, futbolista.getPuntuacion());
-            ps.setInt(5, futbolista.getN_titulos());
-            ps.setInt(6, futbolista.getN_Partidos());
-            ps.setInt(7, futbolista.getN_goles());
-            ps.setInt(8, futbolista.getN_asistencias());
+            ps.setString(1, futbolista.getNombre());
+            ps.setString(2, futbolista.getNacionalidad());
+            ps.setInt(3, futbolista.getPuntuacion());
+            ps.setInt(4, futbolista.getN_titulos());
+            ps.setInt(5, futbolista.getN_Partidos());
+            ps.setInt(6, futbolista.getN_goles());
+            ps.setInt(7, futbolista.getN_asistencias());
            
-                ps.setInt(9, 1);
+                ps.setInt(8, 1);
        
         } finally {
             if (ps != null) {
@@ -108,15 +108,15 @@ public class FutbolistaDAO {
         try {
             ps = conexion.prepareStatement(InsertarFutbolista);
            
-            ps.setString(2, futbolista.getNombre());
-            ps.setString(3, futbolista.getNacionalidad());
-            ps.setInt(4, futbolista.getPuntuacion());
-            ps.setInt(5, futbolista.getN_titulos());
-            ps.setInt(6, futbolista.getN_Partidos());
-            ps.setInt(7, futbolista.getN_goles());
-            ps.setInt(8, futbolista.getN_asistencias());
+            ps.setString(1, futbolista.getNombre());
+            ps.setString(2, futbolista.getNacionalidad());
+            ps.setInt(3, futbolista.getPuntuacion());
+            ps.setInt(4, futbolista.getN_titulos());
+            ps.setInt(5, futbolista.getN_Partidos());
+            ps.setInt(6, futbolista.getN_goles());
+            ps.setInt(7, futbolista.getN_asistencias());
            
-                ps.setInt(9, 2);
+                ps.setInt(8, 2);
        
         } finally {
             if (ps != null) {
@@ -129,15 +129,15 @@ public class FutbolistaDAO {
         try {
             ps = conexion.prepareStatement(InsertarFutbolista);
            
-            ps.setString(2, futbolista.getNombre());
-            ps.setString(3, futbolista.getNacionalidad());
-            ps.setInt(4, futbolista.getPuntuacion());
-            ps.setInt(5, futbolista.getN_titulos());
-            ps.setInt(6, futbolista.getN_Partidos());
-            ps.setInt(7, futbolista.getN_goles());
-            ps.setInt(8, futbolista.getN_asistencias());
+            ps.setString(1, futbolista.getNombre());
+            ps.setString(2, futbolista.getNacionalidad());
+            ps.setInt(3, futbolista.getPuntuacion());
+            ps.setInt(4, futbolista.getN_titulos());
+            ps.setInt(5, futbolista.getN_Partidos());
+            ps.setInt(6, futbolista.getN_goles());
+            ps.setInt(7, futbolista.getN_asistencias());
            
-                ps.setInt(9, 3);
+                ps.setInt(8, 3);
        
         } finally {
             if (ps != null) {

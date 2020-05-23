@@ -103,7 +103,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
         ArrayList<Portero> porteros;
         porteros = (ArrayList<Portero>) d.SelectPorteros();
         for (Portero p : porteros) {
-            System.out.println(p.getNombre() + p.getPuntuacion()+ SUBBLANCO+"   PT"+ANSI_RESET);
+            System.out.println(p.getNombre() +" "+ p.getPuntuacion()+ SUBBLANCO+"   PT"+ANSI_RESET);
         }
     }
 
@@ -115,11 +115,11 @@ public static final String ANSI_BLACK = "\u001B[30m";
         futbolistas = (ArrayList<Futbolista>) f.SelectFutbolistas(Query);
         for (Futbolista ft : futbolistas) {
             if(ft.getPosicion()==posicion.Defensa)
-            System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBAMARILLO+"DF"+ANSI_RESET);
+            System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBAMARILLO+"DF"+ANSI_RESET);
         if(ft.getPosicion()==posicion.CentroCampista)
-                 System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBVERDE+"MC"+ANSI_RESET);
+                 System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBVERDE+"MC"+ANSI_RESET);
           if(ft.getPosicion()==posicion.Delantero)
-                 System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBROJO+"dc"+ANSI_RESET);
+                 System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBROJO+"dc"+ANSI_RESET);
         
             
         }
@@ -132,11 +132,11 @@ public static final String ANSI_BLACK = "\u001B[30m";
         futbolistas = (ArrayList<Futbolista>) f.SelectFutbolistas(Query);
         for (Futbolista ft : futbolistas) {
             if(ft.getPosicion()==posicion.Defensa)
-            System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBAMARILLO+"DF"+ANSI_RESET+"   "+ft.getN_goles()+" Goles");
+            System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBAMARILLO+"DF"+ANSI_RESET+"   "+ft.getN_goles()+" Goles");
         if(ft.getPosicion()==posicion.CentroCampista)
-                 System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBVERDE+"MC"+ANSI_RESET+"   "+ft.getN_goles()+" Goles");
+                 System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBVERDE+"MC"+ANSI_RESET+"   "+ft.getN_goles()+" Goles");
           if(ft.getPosicion()==posicion.Delantero)
-                 System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBROJO+"dc"+ANSI_RESET+"   "+ft.getN_goles()+" Goles");
+                 System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBROJO+"dc"+ANSI_RESET+"   "+ft.getN_goles()+" Goles");
         
             
         }
@@ -149,11 +149,11 @@ public static final String ANSI_BLACK = "\u001B[30m";
         futbolistas = (ArrayList<Futbolista>) f.SelectFutbolistas(Query);
         for (Futbolista ft : futbolistas) {
             if(ft.getPosicion()==posicion.Defensa)
-            System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBAMARILLO+"DF"+ANSI_RESET+"   "+ft.getN_asistencias()+" Asistencias");
+            System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBAMARILLO+"DF"+ANSI_RESET+"   "+ft.getN_asistencias()+" Asistencias");
         if(ft.getPosicion()==posicion.CentroCampista)
-                 System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBVERDE+"MC"+ANSI_RESET+"   "+ft.getN_asistencias()+" Asistencias");
+                 System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBVERDE+"MC"+ANSI_RESET+"   "+ft.getN_asistencias()+" Asistencias");
           if(ft.getPosicion()==posicion.Delantero)
-                 System.out.println(ft.getNombre() + ft.getPuntuacion() +SUBROJO+"dc"+ANSI_RESET+"   "+ft.getN_asistencias()+" Asistencias");
+                 System.out.println(ft.getNombre() +" "+ ft.getPuntuacion() +SUBROJO+"dc"+ANSI_RESET+"   "+ft.getN_asistencias()+" Asistencias");
         
             
         }
@@ -232,7 +232,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
                SUBAMARILLO+ " ________________________________________"+ANSI_RESET
                 );
                                         if(f.getPuntuacion()>70 && f.getPuntuacion()<90)
-        System.out.println(SUBAMARILLO+" ________________________________________"+"\n"+ANSI_RESET+
+        System.out.println(SUBMORADO+" ________________________________________"+"\n"+ANSI_RESET+
                 "|  "+f.getNombre()+"                   "+f.getPuntuacion()+"       \n"
                +"|                                   "+SUBAMARILLO+"DF"+ANSI_RESET+"\n"+
                 "|                                        "+"|\n"+
@@ -242,10 +242,10 @@ public static final String ANSI_BLACK = "\u001B[30m";
                 "|  "+ANSI_RESET+ "Palmares: "+f.getN_titulos()+" Titulos conseguidos"+"      \n"+
                 "|                                        "+"|\n"+
                 "|  "+ANSI_RESET+"Partidos Jugados: "+f.getN_Partidos()+"                 \n"+
-               SUBAMARILLO+ " ________________________________________"+ANSI_RESET
+               SUBMORADO+ " ________________________________________"+ANSI_RESET
                 );
                                                             if(f.getPuntuacion()<71)
-        System.out.println(SUBAMARILLO+" ________________________________________"+"\n"+ANSI_RESET+
+        System.out.println(SUBBLANCO+" ________________________________________"+"\n"+ANSI_RESET+
                 "|  "+f.getNombre()+"                   "+f.getPuntuacion()+"       \n"
                +"|                                   "+SUBAMARILLO+"DF"+ANSI_RESET+"\n"+
                 "|                                        "+"|\n"+
@@ -255,7 +255,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
                 "|  "+ANSI_RESET+ "Palmares: "+f.getN_titulos()+" Titulos conseguidos"+"      \n"+
                 "|                                        "+"|\n"+
                 "|  "+ANSI_RESET+"Partidos Jugados: "+f.getN_Partidos()+"                 \n"+
-               SUBAMARILLO+ " ________________________________________"+ANSI_RESET
+               SUBBLANCO+ " ________________________________________"+ANSI_RESET
                 );
                }
         public static void SHOWCARTAMedio(Futbolista f){
@@ -274,7 +274,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
                SUBAMARILLO+ " ________________________________________"+ANSI_RESET
                 );
                                         if(f.getPuntuacion()>70 && f.getPuntuacion()<90)
-        System.out.println(SUBAMARILLO+" ________________________________________"+"\n"+ANSI_RESET+
+        System.out.println(SUBMORADO+" ________________________________________"+"\n"+ANSI_RESET+
                 "|  "+f.getNombre()+"                  "+f.getPuntuacion()+"       \n"
                +"|                                   "+SUBVERDE+"MC"+ANSI_RESET+"\n"+
                 "|                                        "+"|\n"+
@@ -284,10 +284,10 @@ public static final String ANSI_BLACK = "\u001B[30m";
                 "|  "+ANSI_RESET+ "Palmares: "+f.getN_titulos()+" Titulos conseguidos"+"      \n"+
                 "|                                        "+"|\n"+
                 "|  "+ANSI_RESET+"Partidos Jugados: "+f.getN_Partidos()+"                 \n"+
-               SUBAMARILLO+ " ________________________________________"+ANSI_RESET
+               SUBMORADO+ " ________________________________________"+ANSI_RESET
                 );
                                                             if(f.getPuntuacion()<71)
-        System.out.println(SUBAMARILLO+" ________________________________________"+"\n"+ANSI_RESET+
+        System.out.println(SUBBLANCO+" ________________________________________"+"\n"+ANSI_RESET+
                 "|  "+f.getNombre()+"                   "+f.getPuntuacion()+"       \n"
                +"|                                   "+SUBVERDE+"MC"+ANSI_RESET+"\n"+
                 "|                                        "+"|\n"+
@@ -297,7 +297,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
                 "|  "+ANSI_RESET+ "Palmares: "+f.getN_titulos()+" Titulos conseguidos"+"      \n"+
                 "|                                        "+"|\n"+
                 "|  "+ANSI_RESET+"Partidos Jugados: "+f.getN_Partidos()+"                 \n"+
-               SUBAMARILLO+ " ________________________________________"+ANSI_RESET
+               SUBBLANCO+ " ________________________________________"+ANSI_RESET
                 );
                }
              public static void SHOWCARTADELANTERO(Futbolista f){
@@ -316,7 +316,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
                SUBAMARILLO+ " ________________________________________"+ANSI_RESET
                 );
                                         if(f.getPuntuacion()>70 && f.getPuntuacion()<90)
-        System.out.println(SUBAMARILLO+" ________________________________________"+"\n"+ANSI_RESET+
+        System.out.println(SUBMORADO+" ________________________________________"+"\n"+ANSI_RESET+
                 "|  "+f.getNombre()+"                   "+f.getPuntuacion()+"       \n"
                +"|                                   "+SUBROJO+"DC"+ANSI_RESET+"\n"+
                 "|                                        "+"|\n"+
@@ -326,10 +326,10 @@ public static final String ANSI_BLACK = "\u001B[30m";
                 "|  "+ANSI_RESET+ "Palmares: "+f.getN_titulos()+" Titulos conseguidos"+"      \n"+
                 "|                                        "+"|\n"+
                 "|  "+ANSI_RESET+"Partidos Jugados: "+f.getN_Partidos()+"                 \n"+
-               SUBAMARILLO+ " ________________________________________"+ANSI_RESET
+               SUBMORADO+ " ________________________________________"+ANSI_RESET
                 );
                                                             if(f.getPuntuacion()<71)
-        System.out.println(SUBAMARILLO+" ________________________________________"+"\n"+ANSI_RESET+
+        System.out.println(SUBBLANCO+" ________________________________________"+"\n"+ANSI_RESET+
                 "|  "+f.getNombre()+"                   "+f.getPuntuacion()+"       \n"
                +"|                                   "+SUBROJO+"DC"+ANSI_RESET+"\n"+
                 "|                                        "+"|\n"+
@@ -339,7 +339,7 @@ public static final String ANSI_BLACK = "\u001B[30m";
                 "|  "+ANSI_RESET+ "Palmares: "+f.getN_titulos()+" Titulos conseguidos"+"      \n"+
                 "|                                        "+"|\n"+
                 "|  "+ANSI_RESET+"Partidos Jugados: "+f.getN_Partidos()+"                 \n"+
-               SUBAMARILLO+ " ________________________________________"+ANSI_RESET
+               SUBBLANCO+ " ________________________________________"+ANSI_RESET
                 );
                }
     }

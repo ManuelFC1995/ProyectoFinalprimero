@@ -13,7 +13,7 @@ public class QUERYS {
      public  final static String SelectFutbolistas="select * from Futbolistas order by puntuacion desc";
          public  final static String SelectFutbolistasTitulos="select * from Futbolistas order by n_titulos desc";
           public  final static String SelectFutbolistasGoles="select * from Futbolistas order by n_goles desc";
-             public  final static String SelectFutbolistasAsistencias="select * from Futbolistas order by Asistencias desc";
+             public  final static String SelectFutbolistasAsistencias="select * from Futbolistas order by n_Asistencias desc";
                     public  final static String SelectFutbolistasPartidos="select * from Futbolistas order by n_partidos desc";
        public   final static String SelectDefensas="select * from Futbolistas where posicion=1 order by puntuacion desc";
        public      final static  String SelectCentrocampistas="select * from Futbolistas where posicion = 2 order by puntuacion desc";
